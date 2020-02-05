@@ -17,12 +17,37 @@
          font-size: 2rem;
          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       }
+      h1,h2 {
+         margin: 20px 0;
+      }
+      p{margin: 10px;}
+      .container {
+         width: 60%;
+         display: block; 
+         margin: 0 auto;
+      }
+      ul {
+          max-width: 600px;
+          margin: 20px auto;
+      }
    </style>
 </head>
 <body>
+   <div class="container">
    <h1>Javascript Functional Programming</h1>
-   <p>Functional Programming testing page</p>
-   
+   <h2>Introduction to the Functional Programming Challenges</h2>
+   <p>Functional programming is an approach to software development based around the evaluation of functions. Like Maths, functions in programming map input to output to produce a result. You can combine basic functions in many ways to build more and more complex programs.</p>
+   <p>Functional programming follows a few core principles:
+   </p>
+   <ul>
+      <li>Functions are independent from the state of the program or global variables. They only depend on the arguments passed to them to make a calculation</li>
+      <li>Functional try to limit any changes to the state of the program and avoid 
+          changes to the global objects holding data</li>
+      <li>Functions have minimal side effects in the program</li>
+   </ul>
+
+   <p>This approach breaks the program into small, testable parts.</p>
+</div>
 </body>
 <script src="prepareTea.js"></script>
 </html>
