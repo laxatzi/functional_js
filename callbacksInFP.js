@@ -63,5 +63,23 @@ function mean(arr){
   const anArr = [44,55,64]
    console.log(standardDeviation(anArr));//68.8
 
-   
 
+// Functions that return functions
+// functions ara first class objects so they can accept a function as an argument and return another function.
+
+// lets create power() function
+
+function power(n){
+   return function(power){
+      return Math.pow(n, power);
+   }
+}
+
+// we can now create new more specific functions that use the above generic one
+
+const powerToExp = power(2);
+console.log(powerToExp(5)); // 25
+
+// if a function returns another function it can be immediately invoked by using double parenthesis
+
+console.log(power(2)(4));// 16
