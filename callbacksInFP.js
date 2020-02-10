@@ -36,3 +36,32 @@
       const tea4GreenTeamFCC = null; // <-- change
    // edit code above this line
     console.log(tea4GreenTeamFCC, tea4BlackTeamFCC);
+
+    // another Exercise
+    // lets create a function called 'sum()' that takes an array as an argument as well as a callback. the callback is used to transform the value of each arr item using the 'map()' method, and then using the 'reduce()' method to find the sum of all items in the array
+
+    function sum(arr, callback){
+       if(typeof callback === "function"){
+          arr = arr.map(callback);
+       }
+       return arr.reduce(function(a,b){return a + b});
+    }
+
+    // the callback makes the function more flexible, it allows a transformation to be performed on all the numbers in the array before finding the sum. This means it can be used to find the sum of a set of numbers:
+    function square(n){
+       return n*n;
+    }
+    console.log(sum([3,4,5], square)); // 50
+
+    // create a function by using other functions
+function mean(arr){
+   return sum(arr)/arr.length;
+}
+   function standardDeviation(arr){
+      return sum(arr, square)/arr.length - square(mean(arr));
+   }
+  const anArr = [44,55,64]
+   console.log(standardDeviation(anArr));//68.8
+
+   
+
