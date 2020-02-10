@@ -20,7 +20,3 @@ function greet(greeting) {
 }
 
 console.log(greet.call(woman, "Hello")); // Hello Theodora
-
-console.log(greet.call(null, "Aris"));
-
-console.log(sayHi.apply( ["Theophilos"]));
