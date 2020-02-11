@@ -20,9 +20,6 @@ function greet(greeting) {
 }
 
 console.log(greet.call(woman, "Hello")); // Hello Theodora
-<<<<<<< HEAD
-=======
-
 
 // Consider the following examples
 // function Constructor
@@ -130,4 +127,4 @@ longerSummer.call(book, 'narrative', 1949); // Aivaly, my homeland was written b
 // that is happening coz with apply you have to pass every arg in an array
 
 longerSummer.apply(book, ["narrative", 1949]); // Aivaly, my homeland was written by Fotis Kontoglou. it is a narrative written in 1949.
->>>>>>> 40e32826ffad247a74ef7b94c7a5d16d318978d7
+
