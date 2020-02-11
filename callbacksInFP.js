@@ -78,7 +78,7 @@ function power(n){
 // we can now create new more specific functions that use the above generic one
 
 const powerToExp = power(2);
-console.log(powerToExp(5)); // 25
+console.log(powerToExp(5)); // 32
 
 // if a function returns another function it can be immediately invoked by using double parenthesis
 
