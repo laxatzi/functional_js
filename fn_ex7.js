@@ -61,12 +61,17 @@
       /* 
         SOLUTION:
       var ratings = watchList.map(movie => ({ 
-          title: movie["title"],
+          title: movie["Title"],
           rating: movie["imdbRating"]
        }))    */
 
    // add your code above this line
     
-   console.log(JSON.stringify(ratings));
+   console.log(JSON.stringify(ratings)); 
+//  [
+//   {\"title\":\"Inception\",\"rating\":\"8.8\"},
+//   {\"title\":\"Interstellar\",\"rating\":\"8.6\"},
+//   {\"title\":\"Batman Begins\",\"rating\":\"8.3\"}
+//  ]
 
 }());//end wrapper iife
