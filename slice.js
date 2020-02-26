@@ -32,5 +32,48 @@
     
     var inputAnim = ["Cat", "Dog", "Tiger", "Zebra", "Ant"];
     sliceArray(inputAnim, 1, 3);
-    
+
+}());//end wrapper iife
+
+// REMOVE ELEMENTS FROM AN ARRAY USING SLICE INSTEAD OF SPLICE
+
+/* 
+    A common pattern when working with arrays is when you want to remove items and keep the rest of an array. Javascript offers the 'splice' method for this, which takes arguments for the index of where to start removing items, THEN the number of items to remove. If the second item is not provided, the default is to remove items through the end. 
+    However the 'splice' method mutates the original array it is called on. Here is an example:
+*/
+
+(function(){
+    'use strict';
+    var cities = ["Chicago", "Athens", "Rome", "Istanbul"];
+    cities.splice(2,1)//returns Rome and delete it
+    console.log(cities); // ["Chicago", "Athens", "Istanbul"] 
+
+}());//end wrapper iife
+
+/* 
+    As we saw in the last challenge, the 'slice' method does not mutate the original array, but returns an new one which can be saved into a variable. 
+    Recall that the 'slice' method takes two arguments for the indices to begin and end the slice(the end is non-inclusive), and returns those items in a new array. Using the 'slice' method instead of 'splice' helps to avoid any array-mutating side effects.
+
+    Exercise: 
+    Rewrite the function 'nonMutatingSpace' by using 'slice' instead of 'splice'. 
+    It should limit the provided 'cities' array to a length of 3, and return a new array
+    with only the first three items.
+    Do not mutate the original array provided to the function.
+*/
+
+(function(){
+  "use strict";
+  function nonMutatingSplice(cities){
+     // add your code below this line
+         return cities.slice(0,3);
+     // add your code above this line
+  }
+  var inputCities = [
+     "Chicago", "Delhi", "Islamabad", "London", "Berlin"
+  ];
+
+  console.log(nonMutatingSplice(inputCities);
+
+
+
 }());//end wrapper iife
