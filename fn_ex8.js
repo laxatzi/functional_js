@@ -34,8 +34,15 @@
    ]
 
    const userUnder30 = users.filter(user => user.age <= 30);
-   console.log(userUnder30);
-
+   console.log(userUnder30); /* logs: [[object Object] {
+                                                   age: 25,
+                                                   name: "Maria"
+                                                }
+                                , [object Object] {
+                                                   age: 28,
+                                                   name: "Demetris"
+                                                }
+                               ] */
 }());//end wrapper iife 
 
 // Exercise:
