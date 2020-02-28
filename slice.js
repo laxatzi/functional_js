@@ -72,7 +72,7 @@
      "Chicago", "Delhi", "Islamabad", "London", "Berlin"
   ];
 
-  console.log(nonMutatingSplice(inputCities);
+  console.log(nonMutatingSplice(inputCities));
 
 
 
