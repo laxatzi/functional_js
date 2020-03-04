@@ -171,10 +171,10 @@ var watchList = [
 
  function getRating(watchList){
     // add code below 
-    var avgRating = watchList.filter(movie =>  movie.Director === "Christopher Nolan")
-                               .map(movie => Number(movie.imdbRating))
-                               .reduce((sum, rating) => sum + rating, 0 )
-                               /watchList.filter(movie => movie.Director === "Christopher Nolan").length;
+    var avgRating = watchList.filter(movie =>  movie.Director === "Christopher Nolan")// select Nolan listings
+         .map(movie => Number(movie.imdbRating)) // convert to number in order to reduce
+         .reduce((sum, rating) => sum + rating, 0 ) // reduce (sum  up ratings starting from zero)
+         /watchList.filter(movie => movie.Director === "Christopher Nolan").length; 
     
     // add code above
 
@@ -182,5 +182,28 @@ var watchList = [
  }
 
  console.log(getRating(watchList)); // 8.675
+
+}());//end wrapper iife
+
+// Exercise 2:
+/* 
+  We have defined a function named squareList. 
+  You need to complete the code for the squareList function using any combination of 
+  map(), filter(), reduce() so that it returns a new arr containing only the square of ONLY 
+  the positive integers (decimal numbers are not integers) when the array of real numbers is passed to it. An example of an array containing only real numbers is the following:
+  [-3, 4.8, 5, 3, -3.2].
+  NOTE: Do not use any loop or forEach function
+*/
+
+(function(){
+  'use strict';
+  const squareList = (arr) => {
+   // Only change code below this line
+   return arr;
+   // Only change code above this line
+ };
+ 
+ const squaredIntegers = squareList([-3, 4.8, 5, 3, -3.2]);
+ console.log(squaredIntegers);
 
 }());//end wrapper iife
