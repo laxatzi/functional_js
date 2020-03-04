@@ -199,7 +199,10 @@ var watchList = [
   'use strict';
   const squareList = (arr) => {
    // Only change code below this line
-   return arr;
+   var squareIntegers =
+   arr.filter((num)=> num > 0 && num % parseInt(num) === 0)
+      .map((num)=> num * num);
+   return squareIntegers;
    // Only change code above this line
  };
  
