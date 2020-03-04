@@ -23,7 +23,7 @@
      {name: "Mike", age: 32},
      {name: "Bryan", age: 27}
   ]
-  const sumOfAges = users.reduce((aggragetor, user)=>aggragetor+user.age, 0);
+  const sumOfAges = users.reduce((aggregator, user)=>aggregator+user.age, 0);
   console.log(sumOfAges); //104
 
 }());//end wrapper iife
@@ -32,12 +32,11 @@
 
 (function(){
   'use strict';
-      const name = [
-         {name: "John", age: 46},
-         {name: "Kyle", age: 57},
-         {name: "Jason", age: 56}
-      ];
-
+      const users = [
+         {name: "John", age: 45},
+         {name: "Mike", age: 32},
+         {name: "Bryan", age: 27}
+      ]
       const usersObj = users.reduce((obj, user) => {
          obj[user.name] = user.age;
          return obj;
@@ -172,12 +171,16 @@ var watchList = [
 
  function getRating(watchList){
     // add code below 
-    var avgRating
+    var avgRating = watchList.filter(movie =>  movie.Director === "Christopher Nolan")
+                               .map(movie => Number(movie.imdbRating))
+                               .reduce((sum, rating) => sum + rating )
+                               /watchList.filter(movie => movie.Director === "Christopher Nolan").length;
+    
     // add code above
 
     return avgRating;
  }
 
- console.log(avgRating(watchList)); // 
+ console.log(getRating(watchList)); // 8.675
 
 }());//end wrapper iife
