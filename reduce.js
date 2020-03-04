@@ -173,7 +173,7 @@ var watchList = [
     // add code below 
     var avgRating = watchList.filter(movie =>  movie.Director === "Christopher Nolan")
                                .map(movie => Number(movie.imdbRating))
-                               .reduce((sum, rating) => sum + rating )
+                               .reduce((sum, rating) => sum + rating, 0 )
                                /watchList.filter(movie => movie.Director === "Christopher Nolan").length;
     
     // add code above
