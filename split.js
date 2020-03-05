@@ -65,7 +65,7 @@
       return newStr.join(" ");
     // add code above this line
   }
-
+                 
   console.log(sentensify("May-the-force-be-with-you"));// "May the force be with you"
 
 }());//end wrapper iife
