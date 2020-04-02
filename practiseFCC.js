@@ -84,13 +84,13 @@ console.log(JSON.stringify(ratings));
         "imdbRating": "9.0"
       },
       {
-        "Title": "Batman Begins",
-        "Year": "2005",
-        "Genre": "Action, Adventure",
-        "Director": "Christopher Nolan",
-        "Actors": "Christian Bale, Michael Caine, Liam Neeson, Katie Holmes",
-        "imdbRating": "8.3"
-       }
+       "Title": "Avatar",
+       "Year": "2009",
+       "Genre": "Action, Adventure, Fantasy",
+       "Director": "James Cameron",
+       "Actors": "Sam Worthington, Zoe Saldana, Sigourney Weaver, Stephen Lang",
+       "imdbRating": "7.9"
+      }
    ];
 
 // Only change code below this line
@@ -123,4 +123,60 @@ console.log(JSON.stringify(ratings));
     }
     const inputCities = ["Chicago", "Delhi", "Islamabad", "London", "Berlin"];    
     console.log(nonMutatingSplice(inputCities));
+}
+
+//The variable watchList holds an array of objects with information on several movies. Use reduce to find the average IMDB rating of the movies directed by Christopher Nolan. Recall from prior challenges how to filter data and map over it to pull what you need. You may need to create other variables, and return the average rating from getRating function. Note that the rating values are saved as strings in the object and need to be converted into numbers before they are used in any mathematical operations.
+
+{
+   'use strict';
+   const watchList = [
+      {
+        "Title": "Inception",
+        "Year": "2010",
+        "Genre": "Action, Adventure, Crime",
+        "Director": "Christopher Nolan",
+        "Actors": "Leonardo DiCaprio, Joseph Gordon-Levitt, Ellen Page, Tom Hardy",
+        "imdbRating": "8.8"
+      },
+      {
+        "Title": "Interstellar",
+        "Year": "2014",
+        "Genre": "Adventure, Drama, Sci-Fi",
+        "Director": "Christopher Nolan",
+        "Actors": "Ellen Burstyn, Matthew McConaughey, Mackenzie Foy, John Lithgow",
+        "imdbRating": "8.4"
+      },
+      {
+        "Title": "The Dark Knight",
+        "Year": "2008",
+        "Genre": "Action, Adventure, Crime",
+        "Director": "Christopher Nolan",
+        "Actors": "Christian Bale, Heath Ledger, Aaron Eckhart, Michael Caine",
+        "imdbRating": "9.0"
+      },
+      {
+       "Title": "Avatar",
+       "Year": "2009",
+       "Genre": "Action, Adventure, Fantasy",
+       "Director": "James Cameron",
+       "Actors": "Sam Worthington, Zoe Saldana, Sigourney Weaver, Stephen Lang",
+       "imdbRating": "7.9"
+      }
+   ];
+
+   function getRating(watchList){
+      // Only change code below this line
+      const sumRating = watchList.map(movie => ({
+         director: movie["Director"],
+         rating: movie["imdbRating"]
+      })).filter(movie=> movie.director === "Christopher Nolan").reduce((sum, movie )=> sum +movie.rating ); // 
+      const averageRating = parseFloat(sumRating);
+    
+    
+      // Only change code above this line
+      return averageRating;
+    }
+    console.log(getRating(watchList));
+    
+
 }
