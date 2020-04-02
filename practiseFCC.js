@@ -166,17 +166,16 @@ console.log(JSON.stringify(ratings));
 
    function getRating(watchList){
       // Only change code below this line
-      const sumRating = watchList.map(movie => ({
+      const selectRatings = watchList.map( movie=> ({
          director: movie["Director"],
          rating: movie["imdbRating"]
-      })).filter(movie=> movie.director === "Christopher Nolan").reduce((sum, movie )=> sum +movie.rating ); // 
-      const averageRating = parseFloat(sumRating);
-    
-    
+      })).filter(movie=> movie.director === "Christopher Nolan"); // 
+      
+     const sumRating = selectRatings.map(movie=> parseFloat(movie.rating)).reduce((accumulator, movie)=> accumulator + movie);
+      const averageRating = sumRating/selectRatings.length;
       // Only change code above this line
       return averageRating;
     }
     console.log(getRating(watchList));
-    
-
+   
 }
