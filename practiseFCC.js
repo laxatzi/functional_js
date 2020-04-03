@@ -53,6 +53,7 @@ console.log(JSON.stringify(ratings));
  
 }// end of block
 
+//# 7
 //The variable watchList holds an array of objects with information on several movies. Use a combination of filter and map on watchList to assign a new array of objects with only title and rating keys. The new array should only include objects where imdbRating is greater than or equal to 8.0. Note that the rating values are saved as strings in the object and you may need to convert them into numbers to perform mathematical operations on them.
 
 {
@@ -108,6 +109,7 @@ console.log(JSON.stringify(ratings));
  
 }
 
+// 8
 // Rewrite the function "nonMutatingSplice" by using "slice" instead of "splice".
 // It should limit the provided 'cities' array to a length of 3, and return a new array with only the first three items.
 
@@ -125,6 +127,7 @@ console.log(JSON.stringify(ratings));
     console.log(nonMutatingSplice(inputCities));
 }
 
+// #9
 //The variable watchList holds an array of objects with information on several movies. Use reduce to find the average IMDB rating of the movies directed by Christopher Nolan. Recall from prior challenges how to filter data and map over it to pull what you need. You may need to create other variables, and return the average rating from getRating function. Note that the rating values are saved as strings in the object and need to be converted into numbers before they are used in any mathematical operations.
 
 {
@@ -226,3 +229,19 @@ console.log(JSON.stringify(ratings));
 
 }// end of block
 
+
+{
+// The global variable
+const globalTitle = "Winter Is      Coming!";
+
+// Only change code below this line
+function urlSlug(title) {
+ const titleWords = title.split(" ");
+ const titleWordsGleaned = titleWords.map(word=> word.toLowerCase()).filter(word=> word !== "");
+ const hyphenated = titleWordsGleaned.join("-");
+
+ return hyphenated;
+}
+// Only change code above this line
+  console.log(urlSlug(globalTitle));
+}// end of block
