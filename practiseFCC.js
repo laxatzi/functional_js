@@ -230,18 +230,21 @@ console.log(JSON.stringify(ratings));
 }// end of block
 
 
+// url(slug) generator function exercise solution
+
 {
 // The global variable
 const globalTitle = "Winter Is      Coming!";
 
-// Only change code below this line
-function urlSlug(title) {
+const urlSlug = (title)=> {
  const titleWords = title.split(" ");
  const titleWordsGleaned = titleWords.map(word=> word.toLowerCase()).filter(word=> word !== "");
  const hyphenated = titleWordsGleaned.join("-");
 
  return hyphenated;
 }
-// Only change code above this line
+
+// test code
   console.log(urlSlug(globalTitle));
+
 }// end of block
