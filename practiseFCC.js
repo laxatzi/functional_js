@@ -179,3 +179,50 @@ console.log(JSON.stringify(ratings));
     console.log(getRating(watchList));
    
 }
+
+// Sort method
+/* 
+  The sort method sorts the elements of an array according to a callback function.
+
+  When such a callback function, normally called compareFunction, is supplied, the array elements are sorted according to return value of the compareFunction: if compareFunction(a,b) returns a value less than 0 for two elements a and b, then a will come before b. if compareFunction(a,b) returns a value greater than 0 for two elements a and b, then b will come before a. 
+  If compareFunction(a,b) returns a value equal to 0 for two elements a and b, then a and b will remain unchanged.
+*/
+
+{
+  'use strict';
+
+  let numArr = [2, 1, 7, 3];
+
+  function ascendingOrder(arr){
+    return arr.sort(function(a,b){
+      return a-b;
+    });
+  }
+    console.log(ascendingOrder(numArr)); // [1,2,3,7];
+
+  function descendingOrder(arr){
+    return arr.sort(function(a,b){
+      return b-a;
+    });
+  }
+  console.log(descendingOrder(numArr)); // [6,3,2,1];
+  
+ let strArr = ['w', 's', 'a', 'b'];
+
+ function reverseStr(arr){
+   return arr.sort(function(a,b){
+     return a === b ? 0 : a < b ? 1 : -1;
+   });
+  } // end of reversStr
+  console.log(reverseStr(strArr));// ['w', 's' , 'b', 'a'];
+
+ function straightStr(arr){
+   return arr.sort(function(a,b){
+     return a === b ? 0 : a > b? 1 : -1;
+   });
+ } // end of straightStr 
+
+ console.log(straightStr(strArr)); // ['a', 'b', 's', 'w'];
+
+}// end of block
+
